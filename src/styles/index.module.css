@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right,rgb(34, 34, 122),rgb(31, 103, 109));
+    height: 100vh;
+    width: 100vw;
+   
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    padding:2em 20em 0 20em;
+}
+
+.tasksController{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+}
+
+.tasksController__button{
+    width: 18%;
+    color: white; 
+    border-top: 0;
+    border:1px solid black;
+    background: rgb(34, 31, 49);
+}
+
+.tasksController__button__active{
+    width: 18%;
+    color: white; 
+    border-top: 0;
+    border:1px solid black;
+    background: rgb(58, 54, 79);
+}
+
+.form{
+    width: 100%;
+    height: 15vh;
+    background: rgba(4, 4, 25, 0.901);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.input__field{
+    width: 15%;
+    height: 50%;
+}
+
+.input{
+   border-radius: 4px;
+   outline: none;
+   height: 2.0em;
+   width: 15em;
+   border: none;
+   padding: 5px;
+   box-shadow: 5px 5px 10px black;
+}
+
+.input__message{
+    height: 50%;
+    padding-top: 0.5em;
+    color:rgb(212, 10, 10);
+    font-size: 1.1em; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.checkbox{
+    width: 18px;
+    cursor: pointer;
+}
+
+.button{
+    background: rgb(20, 74, 20);
+    color: white;
+    cursor: pointer;
+    padding: 0.7em 2em;
+    border-radius: 0.3em;
+    box-shadow: 5px 5px 10px black;
+
+}
+
+.button:hover,.tasks__button:hover{
+    background: rgb(12, 131, 12);
+}
+
+.tasks{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.tasks div:nth-child(even){
+    background: rgb(195, 188, 188);
+}
+
+.task{
+    display: grid;
+    background-color: rgb(237, 233, 246);
+    height: 3em;
+    grid-template-columns: repeat(5,1fr);
+    align-content: center;
+    justify-items: center;
+    color: black;
+    font-size: 1.2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.task__item{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.task__item__done{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.task__item__done::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: 2px solid rgb(0, 0, 0); /* Cambia el color y estilo de la línea según tus preferencias */
+}
+
+.tasks__button{
+    background: rgb(20, 74, 20);
+    padding: 0.5em;
+    border-radius: 0.2em;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.task__alert{
+    height: 30vh;
+    width: 40%;
+    background: whitesmoke;
+    position: absolute;
+    border-radius:0 0 0.5em 0.5em;
+    display: grid;
+    place-content: center;
+    top: -30vh;
+    left: 0;
+    bottom:0 ;
+    right: 0;
+    margin:0 auto;
+}
+
+/*.alert__text{
+    font-size: 1.4em;
+    font-family: 'Courier New', Courier, monospace;
+    color: brown;
+}*/
+
+
+.page__control{
+    width: 100%;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    bottom: 10px;
+    left: 0px;
+
+}
+
+.page__control__next{
+    color: white;
+    background: red;
+}
+
